@@ -12,9 +12,9 @@ authors = [
   { name = "Benas67" },
   { name = "kvn.dtrx" },
 ]
-readme = "README.md"
+readme = "readme.md"
 requires-python = ">=3.11"
-license = { file = "LICENSE" }
+license = { file = "license.txt" }
 dependencies = [
   # A python library for easy manipulation and forecasting of time series.
   "darts==0.35.0",

@@ -137,6 +137,8 @@ dmypy.json
 
 # Project-specific
 
+.DS_Store
+
 # Custom files and folders
 data/*
 !data/.gitkeep

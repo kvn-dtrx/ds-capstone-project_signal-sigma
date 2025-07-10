@@ -7,6 +7,7 @@
 import os
 import subprocess
 import matplotlib.pyplot as plt
+import matplotlib.style as mplstyle
 
 # ---
 
@@ -140,12 +141,13 @@ PLT_STYLE = "seaborn-v0_8-darkgrid"
 PLT_STYLE = "dark_background"
 PLT_STYLE = "fast"
 
-try:
+# Basic matplotlib style settings
+if PLT_STYLE in mplstyle.available:
     plt.style.use(PLT_STYLE)
-except:
+else:
     print("Could not load the specified matplotlib style:")
-    print(PLT_STYLE)
-    print("Default style will be used")
+    print(f"  {PLT_STYLE}")
+    print("Default style will be used.")
 
 plt.rcParams["axes.titleweight"] = "bold"
 plt.rcParams["axes.titlesize"] = 18
