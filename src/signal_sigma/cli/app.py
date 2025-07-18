@@ -2,6 +2,8 @@
 # description: Provides a Streamlit app to visualize stock forecast metrics and actual prices.
 # ---
 
+# ---
+
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go

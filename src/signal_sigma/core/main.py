@@ -1,3 +1,11 @@
+# ---
+# description: Entry point for the execution of the core module.
+# ---
+
+# NOTE: Actually, the functionally contained in this files belongs to `__main__.py`
+
+# ---
+
 # -------------------------------------------------------------------------------------
 # 📊 TFT Time Series Forecasting Pipeline Configuration for a Target Stock
 # -------------------------------------------------------------------------------------

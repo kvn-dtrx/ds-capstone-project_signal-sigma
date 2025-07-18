@@ -1,3 +1,9 @@
+# ---
+# description: Combines temporal features.
+# ---
+
+# ---
+
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 

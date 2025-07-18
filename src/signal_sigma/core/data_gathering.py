@@ -2,6 +2,8 @@
 # description: Provides a data gathering utility for stock and macroeconomic data.
 # ---
 
+# ---
+
 import os
 import yfinance as yf
 import pandas as pd

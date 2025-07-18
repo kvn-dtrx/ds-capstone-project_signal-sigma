@@ -1,3 +1,9 @@
+# ---
+# description: Processes data from FRED.
+# ---
+
+# ---
+
 import os
 import pandas as pd
 from fredapi import Fred

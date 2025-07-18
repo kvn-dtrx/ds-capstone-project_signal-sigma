@@ -1,5 +1,7 @@
 # ---
-# description: Feature engineering for stock data.
+# description: Engineers features for stock data.
+# ---
+
 # ---
 
 import pandas as pd

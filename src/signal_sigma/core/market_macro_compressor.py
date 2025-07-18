@@ -2,6 +2,8 @@
 # description: Provides a class to fetch, normalize, and compress macro-market indicators into composite features.
 # ---
 
+# ---
+
 import yfinance as yf
 import pandas as pd
 from sklearn.preprocessing import StandardScaler

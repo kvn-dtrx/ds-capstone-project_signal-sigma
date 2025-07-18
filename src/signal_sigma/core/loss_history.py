@@ -1,3 +1,9 @@
+# ---
+# description: Displays the loss history over the training period.
+# ---
+
+# ---
+
 from pytorch_lightning.callbacks import Callback
 
 
