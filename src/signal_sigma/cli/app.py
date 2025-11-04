@@ -292,7 +292,7 @@ if plot_mode == "Forecast":
         """
     This dashboard visualizes forecasted stock prices using two prediction approaches:
 
-    - **Quantile Forecasting (p10, p50, p90)**: These are estimates of a range of possible outcomes. 
+    - **Quantile Forecasting (p10, p50, p90)**: These are estimates of a range of possible outcomes.
       - p10 = conservative/lower estimate
       - p50 = typical/median estimate
       - p90 = optimistic/upper estimate

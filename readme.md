@@ -91,12 +91,12 @@ If you prefer a more verbose binary identifier, you can also use `signal-sigma` 
 sisi-forecast -r -t NVDA
 
 # Creates and writes forecast data frames for a variety of stocks.
-for ticker in AAPL AMZN GOOGL META MSFT NVDA TSLA; do 
+for ticker in AAPL AMZN GOOGL META MSFT NVDA TSLA; do
   sisi-forecast -t "${ticker}"
 done
 
 # Starts Streamlit frontend.
-sisi 
+sisi
 ```
 
 ## Colophon

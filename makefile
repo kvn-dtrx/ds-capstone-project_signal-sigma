@@ -18,7 +18,7 @@ help:
 	@echo "    make basic-win  : Set up virtual environment and dependencies on Windows (PowerShell)"
 	@echo "    make dev-unix   : Set up development environment and pre-commit hooks on macOS/Linux"
 	@echo "    make dev-win    : Set up development environment and pre-commit hooks on Windows (PowerShell)"
-	@echo 
+	@echo
 	@echo "    $(BOLD_WHITE)Clean-Up:$(RESET)"
 	@echo "    make clear-unix : Clear build artifacts in data, logs, plots on macOS/Linux"
 	@echo "    make clear-win  : Clear build artifacts in data, logs, plots on Windows (PowerShell)"
