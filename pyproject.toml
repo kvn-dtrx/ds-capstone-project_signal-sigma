@@ -10,7 +10,7 @@ authors = [
   { name = "julialoeschel" },
   { name = "payamoghtanem" },
   { name = "Benas67" },
-  { name = "kvn.dtrx" },
+  { name = "kvn-dtrx" },
 ]
 readme = "readme.md"
 requires-python = ">=3.11"
