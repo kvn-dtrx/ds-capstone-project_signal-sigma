@@ -58,9 +58,9 @@ dev-win:
 	.\$(VENV)\Scripts\pre-commit.exe install
 
 clear-unix:
-	find data -mindepth 1 ! -name '.gitkeep' -delete
-	find logs -mindepth 1 ! -name '.gitkeep' -delete
-	find plots -mindepth 1 ! -name '.gitkeep' -delete
+	find data -mindepth 1 ! -name ".gitkeep" -delete
+	find logs -mindepth 1 ! -name ".gitkeep" -delete
+	find plots -mindepth 1 ! -name ".gitkeep" -delete
 
 clear-win:
 	if exist data (for %%f in (data\*) do if /I not "%%~nxf"==".gitkeep" del "%%f")
