@@ -243,7 +243,6 @@ elif plot_mode == "All Stocks Actual":
     st.markdown("### 📊 All Stocks: Actual Price Trends")
     stock_data = {}
     for label, symbol in stock_options.items():
-
         # XXX: Ugly hack in order to not guess the date range
         filenames_guessed = [
             f

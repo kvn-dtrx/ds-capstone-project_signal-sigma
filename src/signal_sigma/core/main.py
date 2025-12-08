@@ -622,7 +622,7 @@ forecast_df["interval_covered_80"] = (
 # === Step 11: Quantile calibration columns — 1 if true <= quantile prediction ===
 quantiles = np.linspace(0.05, 0.95, 19)
 empirical_coverage_dict = {
-    f"coverage_q{int(q*100)}": (
+    f"coverage_q{int(q * 100)}": (
         forecast_df["true"]
         <= quantil_forecast.quantile_timeseries(q).values().squeeze()
     ).astype(int)
