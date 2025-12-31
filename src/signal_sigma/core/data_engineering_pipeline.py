@@ -6,13 +6,14 @@
 
 import os
 from typing import List
+
 import signal_sigma.config.cfg as cfg
 from signal_sigma.core.data_gathering import DataGathering
 from signal_sigma.core.data_preparator import DataPreparator
+from signal_sigma.core.features_selection import ReducedFeatureSelector
 from signal_sigma.core.fred_macro import FredMacroProcessor
 from signal_sigma.core.market_macro_compressor import MarketMacroCompressor
 from signal_sigma.core.temporal_feature_combiner import TemporalFeatureCombiner
-from signal_sigma.core.features_selection import ReducedFeatureSelector
 
 
 class DataEngineeringPipeline:
@@ -22,8 +23,8 @@ class DataEngineeringPipeline:
         start_date: str,
         end_date: str,
         top_n_feature_important: int,
-        tickers: List[str] = cfg.STOCK_TICKERS,
-        macro_tickers: List[str] = cfg.MACRO_TICKERS,
+        tickers: list[str] = cfg.STOCK_TICKERS,
+        macro_tickers: list[str] = cfg.MACRO_TICKERS,
     ):
         self.path_stock = path_stock
         self.start_date = start_date

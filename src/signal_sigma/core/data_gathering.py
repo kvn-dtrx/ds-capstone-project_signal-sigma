@@ -5,10 +5,11 @@
 # ---
 
 import os
-import yfinance as yf
-import pandas as pd
 from datetime import datetime
+
+import pandas as pd
 import signal_sigma.config.cfg as cfg
+import yfinance as yf
 
 
 class DataGathering:

@@ -5,9 +5,10 @@
 # ---
 
 import os
+
 import pandas as pd
-from fredapi import Fred
 from dotenv import load_dotenv
+from fredapi import Fred
 from sklearn.preprocessing import StandardScaler
 
 

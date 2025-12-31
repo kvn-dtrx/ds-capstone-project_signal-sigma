@@ -4,10 +4,10 @@
 
 # ---
 
-import yfinance as yf
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
+import yfinance as yf
 from signal_sigma.config import cfg
+from sklearn.preprocessing import StandardScaler
 
 
 class MarketMacroCompressor:

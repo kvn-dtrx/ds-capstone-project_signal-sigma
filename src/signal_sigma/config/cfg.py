@@ -6,6 +6,7 @@
 
 import os
 import subprocess
+
 import matplotlib.pyplot as plt
 import matplotlib.style as mplstyle
 

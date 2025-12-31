@@ -4,10 +4,10 @@
 
 # ---
 
-import os
-import pandas as pd
 import json
-from typing import List
+import os
+
+import pandas as pd
 from signal_sigma.config.cfg import *
 
 # Canonical name of index column
@@ -22,7 +22,7 @@ DATA_YF_MIF_RELPATH = os.path.join("yf", "macro-indicators-full.csv")
 # Create Cartesian Product of Strings
 
 
-def cartprod(*strss: List[str | List[str]]) -> str | List[str]:
+def cartprod(*strss: list[str | list[str]]) -> str | list[str]:
     if len(strss) == 0:
         return []
     elif len(strss) == 1:
@@ -66,7 +66,7 @@ def load_df_from_csv(
     csvpath = os.path.join(root, str(nb_number - 1), csvpath_rel)
     df = pd.read_csv(csvpath, index_col=IDX)
     jsonpath = csvpath.replace(".csv", ".json")
-    with open(jsonpath, "r") as fh:
+    with open(jsonpath) as fh:
         dtypes = json.load(fh)
     df = df.astype(dtypes)
     return df

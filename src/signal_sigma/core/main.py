@@ -14,58 +14,41 @@
 # 📁 Custom Project Modules
 # ===============================
 
-import signal_sigma.config.cfg as cfg
-
-# # Fetch stock & Yahoo macro data
-# from signal_sigma.data_gathering import DataGathering
-
-# # Prepare dataset for modeling
-# from signal_sigma.data_preparator import DataPreparator
-
-# # Generate technical indicators
-# from signal_sigma.feature_engineering import (
-#     FeatureEngineering,
-# )
-
-# # Download & compress FRED macroeconomic indicators
-# from signal_sigma.fred_macro import (
-#     FredMacroProcessor,
-# )
-
-# # Compress Yahoo macroeconomic signals
-# from signal_sigma.market_macro_compressor import (
-#     MarketMacroCompressor,
-# )
-
-# Main Class
-from signal_sigma.core.data_engineering_pipeline import DataEngineeringPipeline
-
-# Loss function for the model
-from signal_sigma.core.loss_history import LossHistory
+import argparse
 
 # ===============================
 # 🧪 Core Python Libraries
 # ===============================
-
 import os
 import warnings
-import argparse
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 
-from pandas import Timestamp
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import signal_sigma.config.cfg as cfg
 
 # import sys
 # import copy
 # import seaborn as sns
-
 # ===============================
 # ⏳ Time Series Libraries (Darts)
 # ===============================
-
 # Main time series object
 from darts import TimeSeries
+
+# For scaling input data
+from darts.dataprocessing.transformers import Scaler
+
+# Evaluation metrics
+from darts.metrics import (
+    mape,
+    r2_score,
+    # mse,
+    # rmsle,
+    # mae,
+    # rmse,
+    smape,
+)
 
 # Temporal Fusion Transformer model
 from darts.models import TFTModel
@@ -74,30 +57,38 @@ from darts.models import TFTModel
 from darts.utils.likelihood_models import (
     QuantileRegression,
 )
-
-# For scaling input data
-from darts.dataprocessing.transformers import Scaler
-
-# Evaluation metrics
-from darts.metrics import (
-    # mae,
-    # rmse,
-    smape,
-    mape,
-    r2_score,
-    # mse,
-    # rmsle,
-)
+from pandas import Timestamp
 
 # ===============================
 # ⚙️ Machine Learning (Auxiliary)
 # ===============================
-
 # PyTorch Lightning for model training
 from pytorch_lightning.callbacks.early_stopping import (
     # Early stopping callback
     EarlyStopping,
 )
+
+# # Fetch stock & Yahoo macro data
+# from signal_sigma.data_gathering import DataGathering
+# # Prepare dataset for modeling
+# from signal_sigma.data_preparator import DataPreparator
+# # Generate technical indicators
+# from signal_sigma.feature_engineering import (
+#     FeatureEngineering,
+# )
+# # Download & compress FRED macroeconomic indicators
+# from signal_sigma.fred_macro import (
+#     FredMacroProcessor,
+# )
+# # Compress Yahoo macroeconomic signals
+# from signal_sigma.market_macro_compressor import (
+#     MarketMacroCompressor,
+# )
+# Main Class
+from signal_sigma.core.data_engineering_pipeline import DataEngineeringPipeline
+
+# Loss function for the model
+from signal_sigma.core.loss_history import LossHistory
 
 # Sklearn metrics
 from sklearn.metrics import (
@@ -109,7 +100,6 @@ from sklearn.metrics import (
 # ===============================
 # 📋 Utility Tools
 # ===============================
-
 # Nice tabular printing for reporting
 from tabulate import tabulate
 
@@ -519,8 +509,8 @@ plt.show()
 # #  Single-Shot Forecast for Singel Point and Quantiles
 
 
-import pandas as pd
 import numpy as np
+import pandas as pd
 from sklearn.metrics import r2_score
 
 # === Step 1: Predict quantile forecasts (probabilistic output with uncertainty) ===
