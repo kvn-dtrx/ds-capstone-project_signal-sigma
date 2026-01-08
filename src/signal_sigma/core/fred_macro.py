@@ -1,5 +1,5 @@
 # ---
-# description: Processes data from FRED.
+# title: FredMacroProcessor Class
 # ---
 
 # ---

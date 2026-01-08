@@ -1,11 +1,10 @@
 # ---
-# description: Provides a data engineering pipeline for stock and macroeconomic data.
+# title: DataEngineeringPipeline Class
 # ---
 
 # ---
 
 import os
-from typing import List
 
 import signal_sigma.config.cfg as cfg
 from signal_sigma.core.data_gathering import DataGathering

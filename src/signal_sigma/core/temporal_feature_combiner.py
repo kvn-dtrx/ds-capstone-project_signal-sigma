@@ -1,5 +1,5 @@
 # ---
-# description: Combines temporal features.
+# title: TemporalFeatureCombiner Class
 # ---
 
 # ---

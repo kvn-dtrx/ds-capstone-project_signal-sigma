@@ -1,5 +1,5 @@
 # ---
-# description: Displays the loss history over the training period.
+# title: LossHistory Class
 # ---
 
 # ---

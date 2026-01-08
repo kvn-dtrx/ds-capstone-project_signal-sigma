@@ -1,5 +1,5 @@
 # ---
-# description: Engineers features for stock data.
+# title: FeatureEngineering Class
 # ---
 
 # ---

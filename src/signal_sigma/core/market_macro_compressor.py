@@ -1,5 +1,5 @@
 # ---
-# description: Provides a class to fetch, normalize, and compress macro-market indicators into composite features.
+# title: MarketMacroCompressor Class
 # ---
 
 # ---

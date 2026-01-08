@@ -1,5 +1,5 @@
 # ---
-# description: Provides a Streamlit app to visualize stock forecast metrics and actual prices.
+# title: Streamlit App for Visualising Stock Forecast Metrics and Actual Prices
 # ---
 
 # ---

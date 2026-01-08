@@ -1,5 +1,5 @@
 # ---
-# description: Provides a data preparation utility for stock forecasting.
+# title: DataPreparator Class
 # ---
 
 # ---

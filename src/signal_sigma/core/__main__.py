@@ -1,5 +1,5 @@
 # ---
-# description: Entry point for the execution of the core module.
+# title: Core Module Initialisation Code on Import
 # ---
 
 # ---

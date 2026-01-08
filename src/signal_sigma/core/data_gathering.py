@@ -1,5 +1,5 @@
 # ---
-# description: Provides a data gathering utility for stock and macroeconomic data.
+# title: DataGathering Class
 # ---
 
 # ---

@@ -1,5 +1,5 @@
 # ---
-# description: Entry point for the execution of the cli utility.
+# title: CLI Initialisation Code on Invocation
 # ---
 
 # ---

@@ -1,5 +1,5 @@
 # ---
-# description: (Additional) Configurations required for legacy code/notebooks.
+# title: Configurations for Legacy Code and Notebooks
 # ---
 
 # ---

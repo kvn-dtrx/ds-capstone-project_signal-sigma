@@ -1,5 +1,5 @@
 # ---
-# description: Selects features from data automatically.
+# title: ReducesFeatureSelector Class
 # ---
 
 # ---

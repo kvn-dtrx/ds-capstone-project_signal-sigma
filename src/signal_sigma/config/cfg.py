@@ -1,5 +1,5 @@
 # ---
-# description: This file contains global variables and configurations for the project.
+# title: Global Variables and Configurations for the Whole Project
 # ---
 
 # ---
