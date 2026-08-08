@@ -9,6 +9,11 @@ drawings:
 mdc: true
 ---
 
+---
+
+<!-- MD025/single-title/single-h1 -->
+<!-- markdownlint-disable MD025 -->
+
 <!-- background: https://cover.sli.dev -->
 
 # 😱 The Final Week 😱

@@ -1,8 +1,8 @@
 project:
-  name: "DS Capstone Project: Signal Sigma"
-  description: Financial forecasting pipeline using Temporal Fusion Transformer with engineered features, probabilistic predictions, and an interactive Streamlit dashboard
-  github: https://github.com/julialoeschel/capstone-SignalSigma
-  github-fork: https://github.com/kvn-dtrx/ds-capstone-project_signal-sigma
+  id: 1a4b94b3-e6cf-4367-a0b0-ad01e5ef310e
+  name: 'DS Capstone Project: Signal Sigma'
+  description: >-
+    Financial forecasting pipeline using Temporal Fusion Transformer with engineered features, probabilistic predictions, and an interactive Streamlit dashboard
   authors:
     - name: Julia Loeschel
       github: https://github.com/julialoeschel
@@ -13,3 +13,11 @@ project:
     - name: Kvn Dtrx
       mail: kvn.dtrx+git@protonmail.ch
       github: https://github.com/kvn-dtrx
+  license:
+    type: MIT
+    year: 2025
+  github-fork: https://github.com/kvn-dtrx/ds-capstone-project_signal-sigma
+forges:
+  github:
+    url: https://github.com/julialoeschel/capstone-SignalSigma
+    visibility: public

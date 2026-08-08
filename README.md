@@ -62,12 +62,10 @@ The pipeline leverages a **Temporal Fusion Transformer** to deliver both point a
 
 ### Clean-Up
 
-Besides performing a complete purge by manually deleting the project directory, you can use the following `make` targets to selectively clean the directory:
+Besides performing a complete purge by manually deleting the project directory, you can use the following `just` recipes to selectively clean the directory:
 
-- `make clear-unix` / `make clear-win`: Removes build artifacts from the `data/`, `logs/`, `plots/` directories.
-- `make reset-unix` / `make reset-win`: Removes, in addition to the previous option, also the virtual environment.
-
-For a dry run preview, use the `-n` flag.
+- `just clear`: Removes build artefacts from the `data/`, `logs/`, `plots/` directories.
+- `just reset`: Removes, in addition to the previous option, also the virtual environment.
 
 ## <a name="usage"></a>Usage<small><sup>[↩](#table-of-contents)</sup></small>
 

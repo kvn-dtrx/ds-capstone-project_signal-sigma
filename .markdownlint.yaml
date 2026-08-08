@@ -1,13 +1,18 @@
-# Whether to enable all default rules.
+# Whether to enable all default rules
 default: true
-# MD007/ul-indent: Unordered list indentation.
+# MD007/ul-indent: Unordered list indentation
 MD007:
-  # Spaces for indent.
   indent: 4
-# MD013/line-length: Line length.
+# MD013/line-length: Line length
 MD013: false
-# MD033/no-inline-html: Inline HTML.
+# MD033/no-inline-html: Inline HTML
 MD033: false
-# MD050/strong-style: Strong style.
+# MD040/fenced-code-language: Fenced code language
+MD040:
+  severity: error
+# MD050/strong-style: Strong style
 MD050:
   style: "asterisk"
+# MD055/table-pipe-style: Table pipe style
+MD055:
+  style: consistent
