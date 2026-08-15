@@ -16,7 +16,7 @@ project:
   license:
     type: MIT
     year: 2025
-  github-fork: https://github.com/kvn-dtrx/ds-capstone-project_signal-sigma
+    file: LICENSE.txt
 forges:
   github:
     url: https://github.com/julialoeschel/capstone-SignalSigma

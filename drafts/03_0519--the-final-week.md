@@ -42,15 +42,15 @@ What else?
 
 # Agenda for this Week
 
-| Scheduled/Deadline | Task                                    |
-| ------------------ | --------------------------------------- |
-| $\leq$ Mon Eve     | Finalise Streamlit                      |
-| $\leq$ Tue Eve     | Prepare to likely questions with slides |
-| $=$ Wed PM         | Deliver mock presentation               |
-| $=$ Wed AM         | Take a long, long, long walk            |
-| $\leq$ Thu AM      | Arrive in Berlin \[optional\]           |
-| $=$ Thu PM         | Deliver final presentation              |
-| $=$ Fri            | Review project critically               |
+| Scheduled/Deadline | Task |
+| --- | --- |
+| $\leq$ Mon Eve | Finalise Streamlit |
+| $\leq$ Tue Eve | Prepare to likely questions with slides |
+| $=$ Wed PM | Deliver mock presentation |
+| $=$ Wed AM | Take a long, long, long walk |
+| $\leq$ Thu AM | Arrive in Berlin \[optional\] |
+| $=$ Thu PM | Deliver final presentation |
+| $=$ Fri | Review project critically |
 
 ---
 

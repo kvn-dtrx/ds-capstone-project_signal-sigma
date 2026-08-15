@@ -4,11 +4,6 @@
 
 # ---
 
-#
-# Convention: just = clear/reset ops; make = env/setup (venv, pip -e).
-
-# ---
-
 venv := ".venv"
 
 # Shows available recipes
