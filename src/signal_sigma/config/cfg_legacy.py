@@ -8,7 +8,8 @@ import json
 import os
 
 import pandas as pd
-from signal_sigma.config.cfg import *
+
+from signal_sigma.config.cfg import DATA_PATH
 
 # Canonical name of index column
 IDX = "idx"

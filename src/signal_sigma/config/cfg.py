@@ -5,7 +5,7 @@
 # ---
 
 import os
-import subprocess
+from pathlib import Path
 
 import matplotlib.pyplot as plt
 import matplotlib.style as mplstyle
@@ -21,11 +21,15 @@ RSEED = 42
 
 # Root directory of the project
 
-ROOT_PATH = subprocess.run(
-    ["git", "rev-parse", "--show-toplevel"],
-    capture_output=True,
-    text=True,
-).stdout.strip()
+
+def find_project_root(start: Path) -> Path:
+    for directory in (start, *start.parents):
+        if (directory / ".mtdt.yaml").is_file():
+            return directory
+    raise FileNotFoundError(f"No .mtdt.yaml found above {start}")
+
+
+ROOT_PATH = str(find_project_root(Path.cwd()))
 
 
 def join_with_root(*tokens: str, root: str = ROOT_PATH) -> str:

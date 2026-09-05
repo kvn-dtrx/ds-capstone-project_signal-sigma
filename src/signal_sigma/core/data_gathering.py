@@ -8,8 +8,9 @@ import os
 from datetime import datetime
 
 import pandas as pd
-import signal_sigma.config.cfg as cfg
 import yfinance as yf
+
+import signal_sigma.config.cfg as cfg
 
 
 class DataGathering:

@@ -21,11 +21,11 @@ import argparse
 # ===============================
 import os
 import warnings
+from datetime import timedelta
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import signal_sigma.config.cfg as cfg
 
 # import sys
 # import copy
@@ -38,17 +38,6 @@ from darts import TimeSeries
 
 # For scaling input data
 from darts.dataprocessing.transformers import Scaler
-
-# Evaluation metrics
-from darts.metrics import (
-    mape,
-    r2_score,
-    # mse,
-    # rmsle,
-    # mae,
-    # rmse,
-    smape,
-)
 
 # Temporal Fusion Transformer model
 from darts.models import TFTModel
@@ -67,6 +56,15 @@ from pytorch_lightning.callbacks.early_stopping import (
     # Early stopping callback
     EarlyStopping,
 )
+
+# Sklearn metrics
+from sklearn.metrics import (
+    # mean_absolute_error,
+    # mean_squared_error,
+    r2_score,
+)
+
+import signal_sigma.config.cfg as cfg
 
 # # Fetch stock & Yahoo macro data
 # from signal_sigma.data_gathering import DataGathering
@@ -89,19 +87,6 @@ from signal_sigma.core.data_engineering_pipeline import DataEngineeringPipeline
 
 # Loss function for the model
 from signal_sigma.core.loss_history import LossHistory
-
-# Sklearn metrics
-from sklearn.metrics import (
-    # mean_absolute_error,
-    # mean_squared_error,
-    r2_score,
-)
-
-# ===============================
-# 📋 Utility Tools
-# ===============================
-# Nice tabular printing for reporting
-from tabulate import tabulate
 
 # ===============================
 # ❗ Clean Up Output
@@ -335,8 +320,6 @@ raw_covariates = TimeSeries.from_dataframe(
 # -------------------------------------------------------------------------------------
 # ✂️ Step 4: Time-based Split for Train/Val/Test
 # -------------------------------------------------------------------------------------
-from datetime import timedelta  # Used to offset time ranges for slicing covariates
-
 output_len = output_len  # Number of days we want to predict into the future
 input_len = (
     output_len * 5
@@ -423,9 +406,6 @@ print(
 # 🧠 Step 6: Initialize and Train TFT Model
 # -------------------------------------------------------------------------------------
 
-# Initialize the Temporal Fusion Transformer (TFT) model from Darts
-from signal_sigma.core.loss_history import LossHistory
-
 loss_logger = LossHistory()  # Instantiate the callback
 model = TFTModel(
     input_chunk_length=input_len,  # 🔁 Number of historical time steps used as input
@@ -508,10 +488,6 @@ plt.show()
 
 # #  Single-Shot Forecast for Singel Point and Quantiles
 
-
-import numpy as np
-import pandas as pd
-from sklearn.metrics import r2_score
 
 # === Step 1: Predict quantile forecasts (probabilistic output with uncertainty) ===
 quantil_forecast = model.predict(
@@ -735,9 +711,6 @@ plt.tight_layout()
 plt.show()
 
 
-import matplotlib.pyplot as plt
-from pandas import Timestamp
-
 # === Step 1: Set start of plot range for history context ===
 plot_start = Timestamp("2025-01-01")
 raw_target_slice = raw_target.slice(plot_start, raw_target.end_time())
@@ -835,9 +808,6 @@ ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.15), ncol=3, fontsize=10)
 plt.tight_layout()
 plt.show()
 
-
-import matplotlib.pyplot as plt
-from pandas import Timestamp
 
 # === Step 1: Set start of plot range for history context ===
 plot_start = Timestamp("2018-01-01")
@@ -937,9 +907,6 @@ plt.tight_layout()
 plt.show()
 
 
-import matplotlib.pyplot as plt
-import numpy as np
-
 # === Step 1: Aggregate Metrics ===
 avg_metrics = {
     "R² (Point)": forecast_df["r2_point"].mean(),
@@ -980,8 +947,6 @@ plt.grid(axis="y", linestyle="--", alpha=0.6)
 plt.tight_layout()
 plt.show()
 
-
-import matplotlib.pyplot as plt
 
 # === Step 1: Extract relevant series ===
 dates = forecast_df.index

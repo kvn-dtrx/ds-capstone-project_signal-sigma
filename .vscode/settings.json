@@ -2,7 +2,9 @@
   "files.associations": {
     ".pubignore": "ignore"
   },
-  "python.analysis.extraPaths": ["./src"],
+  "python.analysis.extraPaths": [
+    "./src"
+  ],
   "cSpell.words": [
     "addopts",
     "Benas",

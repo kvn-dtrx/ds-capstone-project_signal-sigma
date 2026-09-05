@@ -9,10 +9,10 @@ import os
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import streamlit as st
 
 # from pandas import Timestamp
 import signal_sigma.config.cfg as cfg
-import streamlit as st
 
 # === Page config ===
 st.set_page_config(layout="wide", page_title="Signal Sigma - Stock Forecasting")

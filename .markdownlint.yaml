@@ -1,3 +1,11 @@
+# ---
+# title: Markdownlint for DS Capstone Project: Signal Sigma
+# ---
+
+# ---
+
+# dia:begin markdownlint/base.yaml
+
 # Whether to enable all default rules
 default: true
 # MD007/ul-indent: Unordered list indentation
@@ -16,3 +24,4 @@ MD050:
 # MD055/table-pipe-style: Table pipe style
 MD055:
   style: consistent
+# dia:end

@@ -7,6 +7,7 @@
 import os
 
 import pandas as pd
+
 from signal_sigma.core.feature_engineering import FeatureEngineering
 
 
